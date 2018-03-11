@@ -1,0 +1,125 @@
+mysql> SELECT * FROM Users;
++----------+------+--------+--------+-------------+----------+
+| username | age  | gender | height | postal_code | expenses |
++----------+------+--------+--------+-------------+----------+
+| Anna     |   17 |      0 |    168 |        8902 |        0 |
+| Jose     |   25 |      1 |    179 |       46133 |        0 |
+| Ruben    |   20 |      1 |    180 |       46133 |        0 |
++----------+------+--------+--------+-------------+----------+
+
+mysql> SELECT * FROM Interests;
++------------+----------------+
+| idInterest | nameOfInterest |
++------------+----------------+
+|          0 | Running        |
+|          1 | Futbol         |
+|          2 | Training       |
+|          3 | Outdoors       |
+|          4 | Baloncesto     |
+|          5 | Tennis         |
+|          6 | Golf           |
+|          7 | Halterofilia   |
+|          8 | Skateboard     |
+|          9 | Snow           |
+|         10 | Volleyball     |
+|         11 | Hockey         |
+|         12 | Ciclismo       |
+|         13 | Rugby          |
+|         14 | Natación       |
+|         15 | Yoga           |
+|         16 | Atletismo      |
+|         17 | Boxeo          |
+|         18 | Beisbol        |
+|         19 | Lifestyle      |
++------------+----------------+
+
+mysql> SELECT * FROM Experiences;
++--------------+---------------------------+
+| idExperience | expDescription            |
++--------------+---------------------------+
+|            0 | Maratón de Carreras       |
+|            1 | Curso de Natación         |
+|            2 | Yoga en la playa          |
+|            3 | Barcelona en Lisboa       |
+|            4 | Vuelta al Pedraforca      |
+|            5 | Piragüa en el río Turia   |
+|            6 | Parapeto en  montaña      |
++--------------+---------------------------+
+
+mysql> SELECT * FROM Products;
++-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+| idProduct | urlPhoto                                                                                                                                                          | price |
++-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+|         0 | http://chemasport.es/9115-thickbox_default/sudadera-adidas-trefoil-logo-hoodie-negro.jpg                                                                          |    50 |
+|         1 | https://www.runnea.com/archivos/201705/adidas-terrex-cc-voyager-ficha-300x300x80xX.jpg?1                                                                          |    80 |
+|         2 | http://www.tritienda.com/12985-thickbox_default/zapatillas-adidas-boost.jpg                                                                                       |    55 |
+|         3 | https://www.adidas.es/dis/dw/image/v2/aagl_prd/on/demandware.static/-/Sites-adidas-products/default/dw265e7b0e/zoom/BK0348_21_model.jpg?sh=840&strip=false&sw=840 |    20 |
+|         4 | http://www.sportdynamis.com/23087-large_default/textil-textil-hombre-pantalones-shorts-adidas-pantalon-adidas-sere14-trg.jpg                                      |    30 |
+|         5 | https://www.decathlon.es/media/837/8379740/big_8296a771-a397-4825-8777-0ebcc60d19aa.jpg                                                                           |    25 |
+|         6 | https://http2.mlstatic.com/gorra-adidas-millonarios-nueva-y-original-2017-futbol-D_NQ_NP_875011-MCO26480490931_122017-F.jpgAH//2Q==                               |    40 |
+|         7 | http://images.fillow.net/images/products/1361220212-52124900.jpg                                                                                                  |    15 |
++-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+
+mysql> SELECT * FROM RelInterestUser;
++------------+----------+
+| idInterest | username |
++------------+----------+
+|          1 | Anna     |
+|          3 | Anna     |
+|          5 | Anna     |
+|          7 | Anna     |
+|          9 | Anna     |
+|         11 | Anna     |
+|         13 | Anna     |
+|         15 | Anna     |
+|         17 | Anna     |
+|         19 | Anna     |
+|          1 | Jose     |
+|          2 | Jose     |
+|          3 | Jose     |
+|          4 | Jose     |
+|          5 | Jose     |
+|          6 | Jose     |
+|          7 | Jose     |
+|          8 | Jose     |
+|          9 | Jose     |
+|         10 | Jose     |
+|          0 | Ruben    |
+|          2 | Ruben    |
+|          4 | Ruben    |
+|          6 | Ruben    |
+|          8 | Ruben    |
+|         10 | Ruben    |
+|         12 | Ruben    |
+|         14 | Ruben    |
+|         16 | Ruben    |
+|         18 | Ruben    |
++------------+----------+
+
+mysql> mysql> SELECT * FROM ExperiencesHistory;
++--------------+----------+------------+
+| idExperience | username | dateOfShow |
++--------------+----------+------------+
+|            0 | Anna     | 2017-04-18 |
+|            0 | Ruben    | 2014-02-14 |
+|            4 | Jose     | 2015-08-30 |
++--------------+----------+------------+
+
+mysql> SELECT * FROM AdquiredProducts;
++-----------+----------+
+| idProduct | username |
++-----------+----------+
+|         1 | Anna     |
+|         3 | Anna     |
+|         5 | Anna     |
+|         7 | Anna     |
+|         2 | Jose     |
+|         0 | Ruben    |
+|         1 | Ruben    |
+|         3 | Ruben    |
+|         5 | Ruben    |
+|         7 | Ruben    |
++-----------+----------+
+
+
+
