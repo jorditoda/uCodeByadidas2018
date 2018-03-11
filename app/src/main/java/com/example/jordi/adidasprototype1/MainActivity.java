@@ -116,15 +116,10 @@ public class MainActivity extends AppCompatActivity {
         service.getInterest("3", name).enqueue(new Callback<Interest>() {
             @Override
             public void onResponse(Call<Interest> call, Response<Interest> response) {
-                    System.out.print("RUBEN "+response.raw());
                 if (response.isSuccessful()) {
                     interest = response.body();
 
-                    System.out.print("--------------------->"+interest );
-
                     //mostrar imatge
-
-                    System.out.print("TODATODATODA ---------------->" + interest.geturlPhoto() + "\n");
                     Exp.getInstance().setInterest(interest);
 
                     launchInfoActivity();
